@@ -11,6 +11,7 @@
 		0400F7D2290593E400F5CA49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F7D1290593E400F5CA49 /* ContentView.swift */; };
 		0400F7D4290593E600F5CA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400F7D3290593E600F5CA49 /* Assets.xcassets */; };
 		0400F7D7290593E600F5CA49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400F7D6290593E600F5CA49 /* Preview Assets.xcassets */; };
+		0400F7DE29059D3800F5CA49 /* LineWithSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F7DD29059D3800F5CA49 /* LineWithSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0400F7D1290593E400F5CA49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0400F7D3290593E600F5CA49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0400F7D6290593E600F5CA49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0400F7DD29059D3800F5CA49 /* LineWithSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWithSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				0400F7CF290593E400F5CA49 /* ElementsAppApp.swift */,
 				0400F7D1290593E400F5CA49 /* ContentView.swift */,
+				0400F7DD29059D3800F5CA49 /* LineWithSlider.swift */,
 				0400F7D3290593E600F5CA49 /* Assets.xcassets */,
 				0400F7D5290593E600F5CA49 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0400F7DE29059D3800F5CA49 /* LineWithSlider.swift in Sources */,
 				0400F7D2290593E400F5CA49 /* ContentView.swift in Sources */,
 				0400F7D0290593E400F5CA49 /* ElementsAppApp.swift in Sources */,
 			);
@@ -273,6 +277,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,6 +307,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
