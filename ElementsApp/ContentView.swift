@@ -35,6 +35,8 @@ struct ContentView: View {
                 LineWithSlider(color: greenView, value: $greenNumberTF)
                 LineWithSlider(color: blueView, value: $blueNumberTF)
                 Spacer()
+                ButtonAlert(buttonAction: {})
+                Spacer()
             }
             .padding()
             

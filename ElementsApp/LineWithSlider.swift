@@ -24,7 +24,7 @@ struct LineWithSlider: View {
                 .frame(width: 60, height: 30)
                 .backgroundStyle(.white)
                 .foregroundColor(.black)
-                .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 5))
+                .cornerRadius(10)
             
         }.padding()
     }
