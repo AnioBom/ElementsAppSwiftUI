@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    
     private let redView = Color(red: 249/255, green: 9/255, blue: 44/255)
     private let greenView = Color(red: 138/255, green: 241/255, blue: 1/255)
     private let blueView = Color(red: 70/255, green: 254/255, blue: 255/255)
@@ -24,16 +25,18 @@ struct ContentView: View {
             Color.blue
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                Rectangle()
-                    .foregroundColor(tabViewColоr)
-                    .frame(width: 300, height: 150)
+                Color(
+                    red: CGFloat(redNumberTF),
+                    green: CGFloat(greenNumberTF),
+                    blue: CGFloat(blueNumberTF)
+                )
                     .cornerRadius(20)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 5))
+                    .frame(width: 300, height: 150)
+                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 5))
                     .padding()
-                LineWithSlider(color: redView, value: $redNumberTF)
-                LineWithSlider(color: greenView, value: $greenNumberTF)
-                LineWithSlider(color: blueView, value: $blueNumberTF)
+                LineWithSlider(color: redView, slideValue: $redNumberTF)
+                LineWithSlider(color: greenView, slideValue: $greenNumberTF)
+                LineWithSlider(color: blueView, slideValue: $blueNumberTF)
                 Spacer()
                 ButtonAlert(buttonAction: {})
                 Spacer()
@@ -44,11 +47,6 @@ struct ContentView: View {
     }
 }
 
-extension Color {
-    static let redView = Color(red: 249/255, green: 9/255, blue: 44/255)
-    static let greenView = Color(red: 138/255, green: 241/255, blue: 1/255)
-    static let blueView = Color(red: 70/255, green: 254/255, blue: 255/255)
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

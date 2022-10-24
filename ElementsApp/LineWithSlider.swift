@@ -10,14 +10,14 @@ import SwiftUI
 struct LineWithSlider: View {
     let color: Color
     
-    @Binding var value: CGFloat
-    @State var numberTF = ""
+    @Binding var slideValue: CGFloat
+    @State private var numberTF = ""
     
     var body: some View {
         
         HStack {
-            Text("0").foregroundColor(color)
-            Slider(value: $value)
+            Text(lround(slideValue).formatted())
+            Slider(value: $slideValue)
                 .tint(color)
             TextField("255", text: $numberTF)
                 .textFieldStyle(.roundedBorder)
@@ -32,6 +32,7 @@ struct LineWithSlider: View {
 
 struct LineWithSlider_Previews: PreviewProvider {
     static var previews: some View {
-        LineWithSlider(color: .red, value: .constant(1))
+        LineWithSlider(color: .red, slideValue: .constant(0.5))
     }
 }
+
