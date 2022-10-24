@@ -14,9 +14,13 @@ struct ContentView: View {
     private let greenView = Color(red: 138/255, green: 241/255, blue: 1/255)
     private let blueView = Color(red: 70/255, green: 254/255, blue: 255/255)
     
-    @State var redNumberTF: CGFloat = 1
-    @State var greenNumberTF: CGFloat = 1
-    @State var blueNumberTF: CGFloat = 1
+    @State var redSlider: CGFloat = Double.random(in: 0...255)
+    @State var greenSlider: CGFloat = Double.random(in: 0...255)
+    @State var blueSlider: CGFloat = Double.random(in: 0...255)
+    
+    @State private var redTF = ""
+    @State private var greenTF = ""
+    @State private var blueTF = ""
     
     @State var tabViewColоr: Color = .green
     
@@ -26,17 +30,17 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 Color(
-                    red: CGFloat(redNumberTF),
-                    green: CGFloat(greenNumberTF),
-                    blue: CGFloat(blueNumberTF)
+                    red: CGFloat(redSlider),
+                    green: CGFloat(greenSlider),
+                    blue: CGFloat(blueSlider)
                 )
-                    .cornerRadius(20)
-                    .frame(width: 300, height: 150)
-                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 5))
-                    .padding()
-                LineWithSlider(color: redView, slideValue: $redNumberTF)
-                LineWithSlider(color: greenView, slideValue: $greenNumberTF)
-                LineWithSlider(color: blueView, slideValue: $blueNumberTF)
+                .cornerRadius(20)
+                .frame(width: 300, height: 150)
+                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 5))
+                .padding()
+                LineWithSlider(color: redView, slideValue: $redSlider, numberTF: redTF)
+                LineWithSlider(color: greenView, slideValue: $greenSlider, numberTF: greenTF)
+                LineWithSlider(color: blueView, slideValue: $blueSlider, numberTF: blueTF)
                 Spacer()
                 ButtonAlert(buttonAction: {})
                 Spacer()
@@ -46,7 +50,6 @@ struct ContentView: View {
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

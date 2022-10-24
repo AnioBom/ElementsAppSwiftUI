@@ -11,7 +11,7 @@ struct LineWithSlider: View {
     let color: Color
     
     @Binding var slideValue: CGFloat
-    @State private var numberTF = ""
+    @State var numberTF = ""
     
     var body: some View {
         
@@ -32,7 +32,7 @@ struct LineWithSlider: View {
 
 struct LineWithSlider_Previews: PreviewProvider {
     static var previews: some View {
-        LineWithSlider(color: .red, slideValue: .constant(0.5))
+        LineWithSlider(color: .red, slideValue: .constant(0.5), numberTF: "")
     }
 }
 
